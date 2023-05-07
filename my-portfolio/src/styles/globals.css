@@ -25,3 +25,33 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.skills-list {
+  display: flex;
+}
+
+.skill-item { 
+  padding: 0.25rem;
+  padding-right: 1rem;
+}
+
+.custom-arrow-list {
+  list-style-type: none; /* Remove default list-style */
+  padding-left: 0; /* Remove default padding */
+}
+
+.custom-arrow-list li {
+  position: relative; /* Needed for positioning the arrow */
+  padding-left: 0.5em; /* Create space for the arrow */
+}
+
+.custom-arrow-list li::before {
+  content: ""; /* Empty content is necessary for the pseudo-element to be generated */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the arrow */
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid currentColor; /* Creates the arrow */
+}
