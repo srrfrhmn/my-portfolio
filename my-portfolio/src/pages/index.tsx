@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Sarraf Rahman's Portfolio</title>
+        <title>Sarraf Rahman&apos;s Portfolio</title>
       </Head>
       <main className={`main-cont p-4 md:p-10 lg:p-20 max-w-6xl`} >
         <Intro/>
