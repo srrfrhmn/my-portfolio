@@ -218,7 +218,7 @@ export const Contact = () => {
                     </a>
                 </div>
                 <div style={{marginLeft: '0.2em'}}>
-                    <a className='' href="https://github.com/srrfrhmn" target="_blank" rel="noopener noreferrer">
+                    <a className='' href="https://www.linkedin.com/in/srrfrhmn/" target="_blank" rel="noopener noreferrer">
                         <AiFillLinkedin size={24} />
                     </a>
                 </div>
