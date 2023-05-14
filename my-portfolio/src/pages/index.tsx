@@ -1,6 +1,5 @@
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import { Term } from '@/lib/info'
+import Head from 'next/head'
 import Intro from './Intro'
 import About from './About'
 import Projects from './Projects'
@@ -10,11 +9,16 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className={`main-cont p-4 md:p-10 lg:p-20 max-w-6xl`} >
-      <Intro/>
-      <About/>
-      <Projects/>
-      <Contact/>
-    </main>
+    <>
+      <Head>
+        <title>Sarraf Rahman's Portfolio</title>
+      </Head>
+      <main className={`main-cont p-4 md:p-10 lg:p-20 max-w-6xl`} >
+        <Intro/>
+        <About/>
+        <Projects/>
+        <Contact/>
+      </main>
+    </>
   )
 }

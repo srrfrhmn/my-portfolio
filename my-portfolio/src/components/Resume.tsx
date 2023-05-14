@@ -1,4 +1,4 @@
-import myResume from "../assets/my-resume.pdf";
+import myResume from "../assets/Sarraf_Rahman_Resume.pdf";
 
 export default function Resume() {
   function handleButtonClick() {
