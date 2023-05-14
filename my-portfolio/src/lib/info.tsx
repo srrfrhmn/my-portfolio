@@ -1,3 +1,7 @@
+import ExpandableBar from '@/components/ExpandableBar'
+import { FaGithub, FaExternalLinkAlt, } from 'react-icons/fa';
+import { AiFillLinkedin, AiOutlineGithub, AiOutlineMail } from 'react-icons/ai';
+
 interface TermProp { 
     cd?: string;
 }
@@ -6,6 +10,42 @@ export const Term = ({ cd = "~"}:TermProp) => {
     const commandPrompt = `(base) srrfrhmn@portfolio ${cd} %`;
     return <>{commandPrompt}</>;
 };
+
+export const Ascii = () => {
+    <>
+    <p>
+⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⢻⢷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ⢠⣾
+⢸⠀⠻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣤⢤⣶⠶⠶⢶⣶⡤⣤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⠀&nbsp;&nbsp;&nbsp;&nbsp;⢀⣴⠋⢀⠇
+⠈⣇⠀⠈⠻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡴⠞⠋⢉⡴⠞⠋⣿⠀⠀⠀⡯⠙⠳⣦⡉⠙⠲⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠟⠁⠀⣼⠀
+⠀⠹⣆⠀⠀⠈⠛⢦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⠋⠀⢀⣰⠏⠀⠀⠀⢻⡄⠀⢰⠇⠀⠀⠈⢻⣄⠀⠀⠙⢷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡶⠋⠁⠀⠀⣰⠃⠀
+⠀⠀⠹⣇⠀⠀⠀⠀⠉⠳⢦⣄⡀⠀⠀⠀⢀⡾⠃⠀⣠⠞⠋⠁⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⠀⠀⠉⠙⢷⣄⠀⠙⢧⡀⠀⠀⠀⢀⣠⡶⠛⠁⠀⠀⠀⠀⣴⠃⠀⠀
+⠀⠀⠀⠙⢧⡀⠀⠀⠀⠀⠀⠈⠙⠳⠶⢤⣿⣄⣀⣸⠋⢠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⢹⣆⣀⣨⣷⡤⠶⠚⠋⠁⠀⠀⠀⠀⠀⢠⡾⠃⠀⠀⠀
+⠀⠀⠀⠀⠈⠻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⡇⠈⡇⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⣼⠀⣼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠏⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠈⠻⢦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⣧⠀⠀⠀⠀⠀⠀⠀⣷⠀⠀⠀⠀⠀⠀⠀⡟⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡴⠛⠁⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠳⣦⣀⠀⠀⠀⠀⠀⠀⢀⡟⠀⡏⠀⠀⠀⠀⠀⠀⢀⣿⠀⠀⠀⠀⠀⠀⠀⣿⠀⢿⡀⠀⠀⠀⠀⠀⠀⣠⡴⠞⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⡆⠉⢻⡶⢤⣀⡀⢀⡾⠁⣼⠃⠀⠀⠀⠀⠀⠀⣸⠹⣆⠀⠀⠀⠀⠀⠀⠹⣆⠘⢧⡀⢀⣠⡤⢶⡟⠉⢰⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡏⣧⠀⢸⠃⠀⣨⠿⠋⣠⠞⠁⠀⠀⠀⠀⠀⠀⢸⡏⠀⣹⡆⠀⠀⠀⠀⠀⠀⠘⢦⣈⠛⢿⡅⠀⢸⡇⠀⡿⢻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡕⣿⣧⣸⡀⠀⠛⡶⢶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣹⠰⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠶⣾⠃⠀⢸⣇⡼⡿⢸⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣇⠘⢯⡙⠷⣄⣸⠇⠀⠹⣆⠀⠀⠀⠀⠀⠀⠀⣴⠃⠀⠹⣄⠀⠀⠀⠀⠀⠀⢀⣼⠃⠀⢹⣆⣠⠞⣫⡿⠁⣼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣄⢀⠙⢷⡘⣿⣷⡶⣄⠙⠷⣄⡀⠀⠀⠀⠘⠁⠀⠀⠀⠈⠃⠀⠀⠀⢀⣴⠞⢁⣤⢶⣾⡿⢡⡾⠋⡀⣰⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⠀⠸⣇⠈⣻⣷⣿⠳⣤⡈⠙⠓⠄⠀⠈⠳⡄⠀⣰⠛⠁⠀⠠⠞⠋⢀⣴⠟⣇⣿⡟⠀⣾⠀⠀⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡄⠀⠻⣾⠏⠸⣿⣦⡈⠛⠶⢤⣤⣤⣤⠴⡷⠶⣿⠦⣤⣤⣤⡤⠾⠋⢁⣼⣿⠁⠹⣶⠏⠀⢰⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢷⣄⠀⣿⠀⠀⠘⠿⣿⣦⣤⢴⣿⡿⠃⠀⡷⠛⣦⠀⠘⢿⣷⠦⣤⣶⣿⠟⠁⠀⢀⡿⢀⣰⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣷⠘⣷⣄⠀⠀⠀⠉⠉⠉⠁⠀⠀⠀⡇⠀⡟⠀⠀⠀⠉⠉⠉⠉⠀⠀⠀⣠⣾⠁⡟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣴⡏⢹⢷⣦⣄⡀⠀⣀⣤⡤⢤⡀⡧⠀⠇⢀⡤⢤⣤⡀⠀⣀⣠⣴⣿⡏⢻⣼⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠈⣧⢸⡾⠁⣨⣿⡟⠙⢯⣀⠀⠀⠀⠀⠀⠀⢀⣀⡿⠉⢻⢿⡁⠘⣿⠃⡿⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⡓⠶⠶⠿⡛⠥⠞⠉⢠⣿⣄⡀⠉⠉⠻⣦⣀⡴⠛⠉⠉⢀⣴⣿⡀⠙⠲⠬⣻⠷⠶⠶⢚⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠦⣄⣀⣀⣀⣠⣴⡋⢻⣿⡛⢳⠒⣤⠼⣿⠧⣤⢲⡞⢻⣿⠋⢹⡦⣄⣀⣀⣀⣤⠔⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠹⣆⠈⠛⣾⣿⣧⣿⠙⠛⠓⠛⠚⠛⢋⣇⡾⣿⣷⠋⠀⣼⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣷⡀⣿⣿⣆⠙⠃⠀⠀⠀⠀⠀⠘⠋⣼⡿⣿⢠⡾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢳⡿⣮⡙⠛⣟⣻⣯⣯⣽⣟⣿⠛⢋⣴⣷⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣼⣏⠛⣋⣤⠶⠒⠶⣤⣙⠛⣹⢰⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣧⡉⠉⠉⠀⣠⣤⡄⠀⠉⠉⢁⣼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠲⠤⠞⠋⠀⠙⠶⠤⠖⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                </p>
+    </>
+}
 
 export const FullName = () => {
     return (
@@ -18,7 +58,7 @@ export const FullName = () => {
 export const ShortIntro = () => {
     return (
         <>
-        Hello, I'm Sarraf. I'm a <b>software developer</b> and an <b>Honours Economics and Computer Science</b> student at <b> McMaster University</b>.
+        Hello, I&apos;m Sarraf. I&apos;m a <b>software developer</b> and an <b>Honours Economics and Computer Science</b> student at <b> McMaster University</b>.
         </>
     )
 }
@@ -47,6 +87,22 @@ export const Degree = () => {
     )
 }
 
+interface ListProps {
+    items: string[];
+  }
+  
+const StringList: React.FC<ListProps> = ({ items }) => {
+    return (
+        <ul className="skills-list custom-arrow-list text-black black string-list">
+        {items.map((item, index) => (
+            <li key={index} className="skill-item string-list-item">{item}</li>
+        ))}
+        </ul>
+    );
+};
+
+export default StringList;
+
 const skills = [
     "Javascript",
     "Node.js",
@@ -68,3 +124,110 @@ export const Technologies = () => {
     )
 }
 
+const doorbieTech = ['Next.js', 'Node.js', 'gRPC', 'PostgreSQL', 'auth0', 'Stripe', 'GCP', 'Docker', 'Kubernetes', 'Istio', 'Jest'];
+const blockwatchTech = ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', ' Redux', 'JWT', 'Bcrypt.js', 'Axios'];
+const dataLayerTech = ['Spring Boot', 'JDBC', 'PostgreSQL', 'Docker', 'HikariCP', 'Flyway'];
+const chatAppTech = ['Kotlin', 'Kotlin Coroutines', 'Spring Boot', 'Spring Data', 'RSocket', 'Spring WebFlux', 'H2'];
+
+export const Projects = () => {
+    return (
+        <>
+            <ExpandableBar title="Doorbie">
+                <p className='black'>An in-progress web application project that enables seamless interactions between landlords and tenants.</p>
+                <StringList items={doorbieTech} />
+                <div style={{display: 'flex', marginTop: '1em',}}>
+                    <div style={{ marginRight:'0.5em', width: '20px', height: '20px' }}>
+                        <a className='black' href="https://github.com/srrfrhmnn" target="_blank" rel="noopener noreferrer">
+                            <FaGithub size={20} />
+                        </a>
+                    </div>
+                    {/*
+                    <div style={{ width: '20px', height: '20px' }}>
+                        <a className='black' href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                            <FaExternalLinkAlt size={18} />
+                        </a>
+                    </div>
+                    */}
+                </div>
+            </ExpandableBar>
+            <ExpandableBar title="Blockwatch">
+                <p className='black'>Constructed a secure, full-stack web application inspired by CoinMarketCap.</p>
+                <StringList items={blockwatchTech} />
+                <div style={{display: 'flex', marginTop: '1em',}}>
+                    <div style={{ marginRight:'0.5em', width: '20px', height: '20px' }}>
+                        <a className='black' href="https://github.com/srrfrhmnn/Blockwatch2" target="_blank" rel="noopener noreferrer">
+                            <FaGithub size={20} />
+                        </a>
+                    </div>
+                    {/*
+                    <div style={{ width: '20px', height: '20px' }}>
+                        <a className='black' href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                            <FaExternalLinkAlt size={18} />
+                        </a>
+                    </div>
+                    */}
+                </div>
+            </ExpandableBar>
+            <ExpandableBar title="App Data Layer">
+                <p className='black'>Architected a performant and scalable data access layer for a movie app.</p>
+                <StringList items={dataLayerTech} />
+                <div style={{display: 'flex', marginTop: '1em',}}>
+                    <div style={{ marginRight:'0.5em', width: '20px', height: '20px' }}>
+                        <a className='black' href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                            <FaGithub size={20} />
+                        </a>
+                    </div>
+                    {/*
+                    <div style={{ width: '20px', height: '20px' }}>
+                        <a className='black' href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                            <FaExternalLinkAlt size={18} />
+                        </a>
+                    </div>
+                    */}
+                </div>
+            </ExpandableBar>
+            <ExpandableBar title="Chat Application">
+                <p className='black'>Designed an efficient end-to-end chat application.</p>
+                <StringList items={chatAppTech} />
+                <div style={{display: 'flex', marginTop: '1em',}}>
+                    <div style={{ marginRight:'0.5em', width: '20px', height: '20px' }}>
+                        <a className='black' href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                            <FaGithub size={20} />
+                        </a>
+                    </div>
+                    {/*
+                    <div style={{ width: '20px', height: '20px' }}>
+                        <a className='black' href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                            <FaExternalLinkAlt size={18} />
+                        </a>
+                    </div>
+                    */}
+                </div>
+            </ExpandableBar>
+        </>
+    )
+}
+
+export const Contact = () => {
+    return (
+        <>
+            <div style= {{display: 'flex' , marginTop: '0.8em', marginLeft: '0.2em'}}>
+                <div style={{marginLeft: '0.2em'}}>
+                    <a className='' href="https://github.com/srrfrhmnn" target="_blank" rel="noopener noreferrer">
+                        <AiOutlineGithub size={24} />
+                    </a>
+                </div>
+                <div style={{marginLeft: '0.2em'}}>
+                    <a className='' href="https://github.com/srrfrhmn" target="_blank" rel="noopener noreferrer">
+                        <AiFillLinkedin size={24} />
+                    </a>
+                </div>
+                <div style={{marginLeft: '0.4em'}}>
+                    <a className='' href="mailto:srrfrhmn@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <AiOutlineMail size={24} />
+                    </a>
+                </div>
+            </div>
+        </>
+    )
+}
