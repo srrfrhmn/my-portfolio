@@ -9,7 +9,7 @@ const ExpandableBar: React.FC<ExpandableBarProps> = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-fit">
+    <div className="w-fit h-fit">
       <button
         className="button-cont fill-left"
         onClick={() => setIsOpen(!isOpen)}

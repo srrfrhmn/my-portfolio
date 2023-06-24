@@ -145,3 +145,7 @@ button:hover {
 .block {
   background-color: red;
 }
+
+.desc {
+  padding-bottom: 1em;
+}

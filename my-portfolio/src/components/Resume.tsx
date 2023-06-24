@@ -1,4 +1,4 @@
-import myResume from "../assets/Sarraf_Rahman_Resume.pdf";
+import myResume from "../assets/Sarraf_Rahman_resume.pdf";
 
 export default function Resume() {
   function handleButtonClick() {
@@ -7,7 +7,7 @@ export default function Resume() {
 
   return (
     <button className="button-cont fill-left" onClick={handleButtonClick}>
-      SarrafRahmanResume.pdf
+      Sarraf_Rahman_resume.pdf
     </button>
   );
 }

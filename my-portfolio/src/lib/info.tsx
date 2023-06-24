@@ -11,42 +11,6 @@ export const Term = ({ cd = "~"}:TermProp) => {
     return <>{commandPrompt}</>;
 };
 
-export const Ascii = () => {
-    <>
-    <p>
-⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
-⢻⢷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ⢠⣾
-⢸⠀⠻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣤⢤⣶⠶⠶⢶⣶⡤⣤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⠀&nbsp;&nbsp;&nbsp;&nbsp;⢀⣴⠋⢀⠇
-⠈⣇⠀⠈⠻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡴⠞⠋⢉⡴⠞⠋⣿⠀⠀⠀⡯⠙⠳⣦⡉⠙⠲⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠟⠁⠀⣼⠀
-⠀⠹⣆⠀⠀⠈⠛⢦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⠋⠀⢀⣰⠏⠀⠀⠀⢻⡄⠀⢰⠇⠀⠀⠈⢻⣄⠀⠀⠙⢷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡶⠋⠁⠀⠀⣰⠃⠀
-⠀⠀⠹⣇⠀⠀⠀⠀⠉⠳⢦⣄⡀⠀⠀⠀⢀⡾⠃⠀⣠⠞⠋⠁⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⠀⠀⠉⠙⢷⣄⠀⠙⢧⡀⠀⠀⠀⢀⣠⡶⠛⠁⠀⠀⠀⠀⣴⠃⠀⠀
-⠀⠀⠀⠙⢧⡀⠀⠀⠀⠀⠀⠈⠙⠳⠶⢤⣿⣄⣀⣸⠋⢠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⢹⣆⣀⣨⣷⡤⠶⠚⠋⠁⠀⠀⠀⠀⠀⢠⡾⠃⠀⠀⠀
-⠀⠀⠀⠀⠈⠻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⡇⠈⡇⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⣼⠀⣼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠏⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠈⠻⢦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⣧⠀⠀⠀⠀⠀⠀⠀⣷⠀⠀⠀⠀⠀⠀⠀⡟⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡴⠛⠁⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠳⣦⣀⠀⠀⠀⠀⠀⠀⢀⡟⠀⡏⠀⠀⠀⠀⠀⠀⢀⣿⠀⠀⠀⠀⠀⠀⠀⣿⠀⢿⡀⠀⠀⠀⠀⠀⠀⣠⡴⠞⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⡆⠉⢻⡶⢤⣀⡀⢀⡾⠁⣼⠃⠀⠀⠀⠀⠀⠀⣸⠹⣆⠀⠀⠀⠀⠀⠀⠹⣆⠘⢧⡀⢀⣠⡤⢶⡟⠉⢰⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡏⣧⠀⢸⠃⠀⣨⠿⠋⣠⠞⠁⠀⠀⠀⠀⠀⠀⢸⡏⠀⣹⡆⠀⠀⠀⠀⠀⠀⠘⢦⣈⠛⢿⡅⠀⢸⡇⠀⡿⢻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡕⣿⣧⣸⡀⠀⠛⡶⢶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣹⠰⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠶⣾⠃⠀⢸⣇⡼⡿⢸⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣇⠘⢯⡙⠷⣄⣸⠇⠀⠹⣆⠀⠀⠀⠀⠀⠀⠀⣴⠃⠀⠹⣄⠀⠀⠀⠀⠀⠀⢀⣼⠃⠀⢹⣆⣠⠞⣫⡿⠁⣼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣄⢀⠙⢷⡘⣿⣷⡶⣄⠙⠷⣄⡀⠀⠀⠀⠘⠁⠀⠀⠀⠈⠃⠀⠀⠀⢀⣴⠞⢁⣤⢶⣾⡿⢡⡾⠋⡀⣰⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⠀⠸⣇⠈⣻⣷⣿⠳⣤⡈⠙⠓⠄⠀⠈⠳⡄⠀⣰⠛⠁⠀⠠⠞⠋⢀⣴⠟⣇⣿⡟⠀⣾⠀⠀⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡄⠀⠻⣾⠏⠸⣿⣦⡈⠛⠶⢤⣤⣤⣤⠴⡷⠶⣿⠦⣤⣤⣤⡤⠾⠋⢁⣼⣿⠁⠹⣶⠏⠀⢰⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢷⣄⠀⣿⠀⠀⠘⠿⣿⣦⣤⢴⣿⡿⠃⠀⡷⠛⣦⠀⠘⢿⣷⠦⣤⣶⣿⠟⠁⠀⢀⡿⢀⣰⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣷⠘⣷⣄⠀⠀⠀⠉⠉⠉⠁⠀⠀⠀⡇⠀⡟⠀⠀⠀⠉⠉⠉⠉⠀⠀⠀⣠⣾⠁⡟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣴⡏⢹⢷⣦⣄⡀⠀⣀⣤⡤⢤⡀⡧⠀⠇⢀⡤⢤⣤⡀⠀⣀⣠⣴⣿⡏⢻⣼⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠈⣧⢸⡾⠁⣨⣿⡟⠙⢯⣀⠀⠀⠀⠀⠀⠀⢀⣀⡿⠉⢻⢿⡁⠘⣿⠃⡿⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⡓⠶⠶⠿⡛⠥⠞⠉⢠⣿⣄⡀⠉⠉⠻⣦⣀⡴⠛⠉⠉⢀⣴⣿⡀⠙⠲⠬⣻⠷⠶⠶⢚⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠦⣄⣀⣀⣀⣠⣴⡋⢻⣿⡛⢳⠒⣤⠼⣿⠧⣤⢲⡞⢻⣿⠋⢹⡦⣄⣀⣀⣀⣤⠔⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠹⣆⠈⠛⣾⣿⣧⣿⠙⠛⠓⠛⠚⠛⢋⣇⡾⣿⣷⠋⠀⣼⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣷⡀⣿⣿⣆⠙⠃⠀⠀⠀⠀⠀⠘⠋⣼⡿⣿⢠⡾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢳⡿⣮⡙⠛⣟⣻⣯⣯⣽⣟⣿⠛⢋⣴⣷⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣼⣏⠛⣋⣤⠶⠒⠶⣤⣙⠛⣹⢰⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣧⡉⠉⠉⠀⣠⣤⡄⠀⠉⠉⢁⣼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠲⠤⠞⠋⠀⠙⠶⠤⠖⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                </p>
-    </>
-}
-
 export const FullName = () => {
     return (
         <>
@@ -58,7 +22,7 @@ export const FullName = () => {
 export const ShortIntro = () => {
     return (
         <>
-        Hello, I&apos;m Sarraf. I&apos;m a <b>software developer</b> and an <b>Honours Economics and Computer Science</b> student at <b> McMaster University</b>.
+        Hello, I&apos;m Sarraf. I&apos;m a <b>software developer</b> and an <b>Honours Computer Science and Economics</b> student at <b> McMaster University</b>.
         </>
     )
 }
@@ -66,10 +30,18 @@ export const ShortIntro = () => {
 export const LongIntro = () => {
     return (
         <>
-        My  interest in emerging technologies drives me to contribute to open-source projects and engage with developer communities. In addition to my academic pursuits, I actively focus on building software solutions to real world issues.
+        My  interest in emerging technologies drives me to work on contributing to open-source projects and engaging with developer communities. In addition to my academics, I actively focus on thinking of and building software solutions to real-world issues.
         </>
     )
 }
+
+export const Hobbies = () => {
+    return (
+        <>
+        When I am not programming, I enjoy reading philosophy, losing in chess, and going to the gym.
+        </>
+    )
+    }
 
 export const University = () => {
     return (
@@ -82,7 +54,7 @@ export const University = () => {
 export const Degree = () => {
     return (
         <>
-        Honours Economics and Computer Science, <i> Hons. B.A. (2025) </i>
+        Honours Computer Science and Economics, <i> Hons. B.A. (2025) </i>
         </>
     )
 }
@@ -133,15 +105,16 @@ export const Projects = () => {
     return (
         <>
             <ExpandableBar title="Doorbie">
-                <p className='black'>An in-progress web application project that enables seamless interactions between landlords and tenants.</p>
+                <p className='black desc'>An in-progress web application project that handles seamless transactions and interactions between landlords and tenants. This system alleviates the strain of property leasing for landlords while simultaneously streamlining the process for renters in their quest to find reputable landlords.</p>
                 <StringList items={doorbieTech} />
                 <div style={{display: 'flex', marginTop: '1em',}}>
+                    {/*
                     <div style={{ marginRight:'0.5em', width: '20px', height: '20px' }}>
                         <a className='black' href="https://github.com/srrfrhmnn" target="_blank" rel="noopener noreferrer">
                             <FaGithub size={20} />
                         </a>
                     </div>
-                    {/*
+                    
                     <div style={{ width: '20px', height: '20px' }}>
                         <a className='black' href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
                             <FaExternalLinkAlt size={18} />
@@ -151,7 +124,7 @@ export const Projects = () => {
                 </div>
             </ExpandableBar>
             <ExpandableBar title="Blockwatch">
-                <p className='black'>Constructed a secure, full-stack web application inspired by CoinMarketCap.</p>
+                <p className='black desc'>Constructed a secure, full-stack web application inspired by CoinMarketCap. The system focuses on the seamless and secure tracking of digital assets. The back-end infrastructure is engineered with Node.js and MongoDB, ensuring reliable handling of user requests. The front-end utilizes React.js and Redux for effective state management, providing users a seamless experience. JWT tokens and bcrypt are employed for secure user login and session management. </p>
                 <StringList items={blockwatchTech} />
                 <div style={{display: 'flex', marginTop: '1em',}}>
                     <div style={{ marginRight:'0.5em', width: '20px', height: '20px' }}>
@@ -161,7 +134,7 @@ export const Projects = () => {
                     </div>
                     {/*
                     <div style={{ width: '20px', height: '20px' }}>
-                        <a className='black' href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                        <a className='black' href="https://github.com/srrfrhmnn" target="_blank" rel="noopener noreferrer">
                             <FaExternalLinkAlt size={18} />
                         </a>
                     </div>
@@ -169,17 +142,18 @@ export const Projects = () => {
                 </div>
             </ExpandableBar>
             <ExpandableBar title="App Data Layer">
-                <p className='black'>Architected a performant and scalable data access layer for a movie app.</p>
+                <p className='black desc'>This project is an intricate project that leverages several technologies to design a scalable data access layer. This project ensures seamless interactions between multiple components of an application and a PostgreSQL database. By integrating the HikariCP Connection Pool, it optimally manages the application performance and scalability for frequent and recurring database connections. The use of Docker simplifies deployment, making the system more robust and efficient.</p>
                 <StringList items={dataLayerTech} />
                 <div style={{display: 'flex', marginTop: '1em',}}>
+                    {/*
                     <div style={{ marginRight:'0.5em', width: '20px', height: '20px' }}>
-                        <a className='black' href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                        <a className='black' href="https://github.com/srrfrhmnn" target="_blank" rel="noopener noreferrer">
                             <FaGithub size={20} />
                         </a>
                     </div>
-                    {/*
+                    
                     <div style={{ width: '20px', height: '20px' }}>
-                        <a className='black' href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                        <a className='black' href="https://github.com/srrfrhmnn" target="_blank" rel="noopener noreferrer">
                             <FaExternalLinkAlt size={18} />
                         </a>
                     </div>
@@ -187,17 +161,18 @@ export const Projects = () => {
                 </div>
             </ExpandableBar>
             <ExpandableBar title="Chat Application">
-                <p className='black'>Designed an efficient end-to-end chat application.</p>
+                <p className='black desc'>This end-to-end project aims to create a seamless communication environment for users, fostering real-time interactions. The application is optimized for performance, utilizing Kotlin Coroutines with Spring WebFlux for efficient handling of user requests. RSocket is deployed to ensure non-blocking communication between microservices, enabling a smoother user experience.</p>
                 <StringList items={chatAppTech} />
                 <div style={{display: 'flex', marginTop: '1em',}}>
+                    {/*
                     <div style={{ marginRight:'0.5em', width: '20px', height: '20px' }}>
-                        <a className='black' href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                        <a className='black' href="https://github.com/srrfrhmnn" target="_blank" rel="noopener noreferrer">
                             <FaGithub size={20} />
                         </a>
                     </div>
-                    {/*
+                    
                     <div style={{ width: '20px', height: '20px' }}>
-                        <a className='black' href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                        <a className='black' href="https://github.com/srrfrhmnn" target="_blank" rel="noopener noreferrer">
                             <FaExternalLinkAlt size={18} />
                         </a>
                     </div>

@@ -6,6 +6,11 @@ import About from './About'
 import Projects from './Projects'
 import Contact from './Contact'
 
+import Typing from '@/components/Typing';
+import IntroTyped from '@/components/IntroTyped';
+
+import React, { useState, useEffect } from 'react';
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -32,6 +37,30 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const [loadComponentA, setLoadComponentA] = useState(false);
+  const [loadComponentB, setLoadComponentB] = useState(false);
+  const [loadComponentC, setLoadComponentC] = useState(false);
+
+  useEffect(() => {
+    setLoadComponentA(true);
+  }, []);
+
+  useEffect(() => {
+    if (loadComponentA) {
+      setTimeout(() => {
+        setLoadComponentB(true);
+      }, 2000); // delay time (in ms) before the component starts loading
+    }
+  }, [loadComponentA]);
+
+  useEffect(() => {
+    if (loadComponentB) {
+      setTimeout(() => {
+        setLoadComponentC(true);
+      }, 2000); // delay time (in ms) before the component starts loading
+    }
+  }, [loadComponentB]);
+
   return (
     <>
       <Head>
