@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        
+          <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
           <meta property="og:title" content="Sarraf Rahman" />
           <meta name="description" content="Sarraf Rahman" />
           <meta name="keywords" content="Sarraf Rahman, Portfolio, Software Developer, McMaster University" />

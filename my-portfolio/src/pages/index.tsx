@@ -1,12 +1,7 @@
-import { Inter } from 'next/font/google'
 import type { Metadata } from 'next';
-import Head from 'next/head'
-import Intro from './Intro'
-import About from './About'
-import Projects from './Projects'
-import Contact from './Contact'
 
-const inter = Inter({ subsets: ['latin'] })
+import {FullName, ShortIntro, Education} from '@/lib/info'
+import {HL} from "@/lib/info"
 
 export const metadata: Metadata = {
   title: {
@@ -31,20 +26,17 @@ export const metadata: Metadata = {
   }
 };
 
+
+
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Sarraf Rahman&apos;s Portfolio</title>
-        <meta property="og:image" content="https://srrfrhmn.com/srrf_logo.png" />
-        <meta property="og:image:width" content="880" />
-        <meta property="og:image:height" content="880" />
-      </Head>
-      <main className={`main-cont p-4 md:p-10 lg:p-20 max-w-6xl`} >
-        <Intro/>
-        <About/>
-        <Projects/>
-        <Contact/>
+      <main className={`landing main-cont p-4 md:p-10 lg:p-20 max-w-6xl`} >
+          <div className='text-left'>
+              <h1 className='default-font pb-2 text-4xl tracking-tighter'> <FullName /> </h1>
+              <h1 className='default-font pb-2'> <ShortIntro />  </h1>
+              <h2 className='default-font pb-2'><Education/></h2>
+          </div>
       </main>
     </>
   )

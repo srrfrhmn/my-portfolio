@@ -50,7 +50,7 @@ export const Ascii = () => {
 export const FullName = () => {
     return (
         <>
-            Sarraf Rahman
+            sarraf rahman
         </>
     )
 }
@@ -58,7 +58,7 @@ export const FullName = () => {
 export const ShortIntro = () => {
     return (
         <>
-        Hello, I&apos;m Sarraf. I&apos;m a <b>software developer</b> and an <b>Honours Economics and Computer Science</b> student at <b> McMaster University</b>.
+        Hello, I&apos;m Sarraf. I&apos;m a <b className='underline'>software developer</b>.
         </>
     )
 }
@@ -82,10 +82,25 @@ export const University = () => {
 export const Degree = () => {
     return (
         <>
-        Honours Economics and Computer Science, <i> Hons. B.A. (2025) </i>
+        Honours Bachelor of Arts in Computer Science and Economics <i> Hons. B.A. (4th year) </i>
         </>
     )
 }
+
+export const Education = () => {
+    return (
+        <>
+            <div className='responsive-desc'>
+                <span className="text-neutral-500">I&apos;m currently a student at</span>{' '}
+                <a href="https://www.mcmaster.ca" className='' target="_blank" rel="noopener noreferrer">
+                <span className="text-neutral-400">McMaster University </span>
+                </a>{' '}
+                <span className="text-neutral-500">pursuing an Honours Bachelor of Arts in Computer Science and Economics.</span>
+            </div>
+        </>
+    );
+};
+
 
 interface ListProps {
     items: string[];
@@ -227,6 +242,22 @@ export const Contact = () => {
                         <AiOutlineMail size={24} />
                     </a>
                 </div>
+            </div>
+        </>
+    )
+}
+
+export const HL = () => {
+    return ( <hr className='my-6 border-neutral-100 dark:border-neutral-800' /> )
+}
+
+export const ScrollDown = () => {
+    return (
+        <>
+            <div className="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </>
     )
