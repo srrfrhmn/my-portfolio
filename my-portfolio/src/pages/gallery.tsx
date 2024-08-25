@@ -30,7 +30,7 @@ export default function Gallery() {
 
     return (
       <>
-        <main className={`main-cont p-4 md:p-10 lg:p-20`} >
+        <main className={`main-cont p-4 md:p-10 lg:p-20`} style={{height: '100vh', overflowY: 'auto'}}>
             <div className='text-left'>
                 <h1 className='default-font mb-6 text-4xl tracking-tighter'> my gallery </h1>
             </div>
