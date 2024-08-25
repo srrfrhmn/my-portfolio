@@ -25,9 +25,9 @@ export default function Navigation() {
             ) : (
                 <div className='nav-cont'>
                     <div className={`nav-links p-4`}>
-                        <NavLink href="/" currentPath={pathname} label="about" />
-                        <NavLink href="/work" currentPath={pathname} label="work" />
-                        <NavLink href="/gallery" currentPath={pathname} label="gallery" />
+                        <NavLink href="/" currentPath={pathname} label="/me" />
+                        <NavLink href="/career" currentPath={pathname} label="/career" />
+                        <NavLink href="/gallery" currentPath={pathname} label="/gallery" />
                         {/* <ScrollDown /> */}
                     </div>
                 </div>
@@ -61,7 +61,7 @@ function MobileNavigation({ currentPath }: { currentPath: string }) {
         <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 backdrop-blur-md rounded-full shadow-lg p-2">
             <div className="flex space-x-4">
                 <MobileNavLink href="/" currentPath={currentPath} icon={<FaUser />} />
-                <MobileNavLink href="/work" currentPath={currentPath} icon={<FaBriefcase />} />
+                <MobileNavLink href="/career" currentPath={currentPath} icon={<FaBriefcase />} />
                 <MobileNavLink href="/gallery" currentPath={currentPath} icon={<FaImage />} />
             </div>
         </div>

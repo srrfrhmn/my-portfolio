@@ -11,7 +11,7 @@ export default function Work() {
         <main className={`main-cont p-4 md:p-10 lg:p-20`} style={{}}>
             <div className='text-left'>
                 <h1 className='default-font mb-6 text-4xl tracking-tighter'> my career </h1>
-                <p className="default-font text-neutral-300 mb-3 text-sm"><span className="text-neutral-500">feel free to contact me for my</span> resume.</p>
+                <p className="default-font text-neutral-500 mb-3 text-sm">feel free to contact me for my <span className="text-white">resume </span> for more details. </p>
                 <HL />
                 <div className="rian" style={{}}>
                     <WorkItem 
@@ -24,6 +24,7 @@ export default function Work() {
                                 
                             </p>
                         }
+                        isEducation={true}
                     />
                     {/* Add more education items if needed */}
                 </div>
@@ -36,7 +37,7 @@ export default function Work() {
                         description= 
                         {
                             <p>
-                                At Dayforce, I worked on the Tax and Payments team, helping to process billions of dollars in transactions for clients across North America.
+                                At Dayforce, I am working on the Tax and Payments team, helping to process billions of dollars in transactions for clients across North America.
                             </p>
                         }
                         isCurrent={true}

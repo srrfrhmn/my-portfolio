@@ -35,7 +35,7 @@ export default function Gallery() {
                 <h1 className='default-font mb-6 text-4xl tracking-tighter'> my gallery </h1>
             </div>
             <p className="default-font text-neutral-300 mb-3 text-sm"><span className="text-neutral-500">
-              i like to take photos, see my </span> <a href="https://vsco.co/srrfrhmn/gallery" target="_blank" rel="noopener noreferrer">vsco</a><span className="text-neutral-500"> for more.</span>
+              i like to take photos. see my </span> <a href="https://vsco.co/srrfrhmn/gallery" target="_blank" rel="noopener noreferrer">vsco</a><span className="text-neutral-500"> for more.</span>
             </p>
             <HL />
 

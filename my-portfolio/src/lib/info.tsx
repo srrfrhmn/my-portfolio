@@ -17,7 +17,7 @@ export const FullName = () => {
 export const ShortIntro = () => {
     return (
         <>
-        building square wheels to understand why they&apos;re circles.
+        building square wheels to understand why they& circles.
         </>
     )
 }
@@ -201,32 +201,41 @@ export const Projects = () => {
 }
 
 export const Contact = () => {
+    const contactLinks = [
+        { href: "https://www.linkedin.com/in/srrfrhmn/", Icon: AiFillLinkedin },
+        { href: "https://github.com/srrfrhmn", Icon: AiOutlineGithub },
+        { href: "mailto:srrfrhmn@gmail.com", Icon: AiOutlineMail },
+    ];
+
     return (
-        <>
-            <div style= {{display: 'flex' , marginTop: '0.8em', marginLeft: '0.2em'}}>
-                <div style={{marginLeft: '0.2em'}}>
-                    <a className='' href="https://github.com/srrfrhmnn" target="_blank" rel="noopener noreferrer">
-                        <AiOutlineGithub size={24} />
-                    </a>
-                </div>
-                <div style={{marginLeft: '0.2em'}}>
-                    <a className='' href="https://www.linkedin.com/in/srrfrhmn/" target="_blank" rel="noopener noreferrer">
-                        <AiFillLinkedin size={24} />
-                    </a>
-                </div>
-                <div style={{marginLeft: '0.4em'}}>
-                    <a className='' href="mailto:srrfrhmn@gmail.com" target="_blank" rel="noopener noreferrer">
-                        <AiOutlineMail size={24} />
-                    </a>
-                </div>
-            </div>
-        </>
-    )
-}
+        <div className="flex">
+            {contactLinks.map(({ href, Icon }, index) => (
+                <a
+                    key={index}
+                    className="ml-1"
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <Icon size={20} />
+                </a>
+            ))}
+        </div>
+    );
+};
 
 export const HL = () => {
     return ( <hr className='my-6 border-neutral-100 dark:border-neutral-800' /> )
 }
+
+export const AnimatedWave = () => {
+  return (
+    <span className="ml-3 inline-flex space-x-1">
+      <span className="w-0.5 h-4 bg-gray-600 rounded-full animate-wave"></span>
+      <span className="w-0.5 h-4 bg-gray-600 rounded-full animate-wave" style={{animationDelay: '0.2s'}}></span>
+    </span>
+  );
+};
 
 export const ScrollDown = () => {
     return (

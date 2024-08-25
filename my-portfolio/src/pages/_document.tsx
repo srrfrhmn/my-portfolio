@@ -7,9 +7,9 @@ export default function Document() {
           <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
           <meta property="og:title" content="Sarraf Rahman" />
           <meta name="description" content="Sarraf Rahman" />
-          <meta name="keywords" content="Sarraf Rahman, Portfolio, Software Developer, McMaster University" />
+          <meta name="keywords" content="Sarraf Rahman, Portfolio, Software Engineer, McMaster University" />
           <meta name="author" content="Sarraf Rahman" />
-          <meta property="og:description" content="Developer, innovator, technologist." />
+          <meta property="og:description" content=" building square wheels to understand why they're circles." />
           <meta property="og:url" content="https://srrfrhmn.com/" />
           <meta property="og:site_name" content="Sarraf Rahman"/>
           <meta property="og:image" content="https://srrfrhmn.com/srrf_logo.png" />
