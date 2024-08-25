@@ -1,19 +1,50 @@
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 import WorkItem from "@/components/WorkItem"
 import {HL} from "@/lib/info"
 
 export default function Work() {
+    const router = useRouter();
+
     return (
       <>
         <main className={`main-cont p-4 md:p-10 lg:p-20`} style={{}}>
             <div className='text-left'>
-                <h1 className='default-font mb-6 text-4xl tracking-tighter'> my work </h1>
+                <h1 className='default-font mb-6 text-4xl tracking-tighter'> my career </h1>
                 <p className="default-font text-neutral-300 mb-3 text-sm"><span className="text-neutral-500">feel free to contact me for my</span> resume.</p>
                 <HL />
                 <div className="rian" style={{}}>
                     <WorkItem 
+                        company="McMaster University"
+                        position="Bachelor of Arts in Computer Science and Economics"
+                        duration="Expected Graduation: May 2026"
+                        description= 
+                        {
+                            <p>
+                                
+                            </p>
+                        }
+                    />
+                    {/* Add more education items if needed */}
+                </div>
+
+                <div className="rian" style={{}}>
+                    <WorkItem 
+                        company="Dayforce"
+                        position="Software Engineer Intern"
+                        duration="May 2024 - December 2024"
+                        description= 
+                        {
+                            <p>
+                                At Dayforce, I worked on the Tax and Payments team, helping to process billions of dollars in transactions for clients across North America.
+                            </p>
+                        }
+                        isCurrent={true}
+                    />
+                    <WorkItem 
                         company="Mely.ai"
-                        position="Software Developer Intern"
-                        duration="September - December 2023"
+                        position="Software Engineer Intern"
+                        duration="September 2023 - December 2023"
                         description= 
                         {
                             <p>
@@ -23,8 +54,8 @@ export default function Work() {
                     />
                     <WorkItem 
                         company="Doorbie"
-                        position="Software Developer Intern"
-                        duration="January - August 2023"
+                        position="Software Engineer Intern"
+                        duration="January 2023 - August 2023"
                         description= 
                         {
                             <p>

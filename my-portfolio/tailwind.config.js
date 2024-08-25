@@ -17,6 +17,22 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      keyframes: {
+        pulse: {
+          '0%, 100%': { opacity: 1 },
+          '50%': { opacity: 0.5 },
+        },
+        wave: {
+          '0%, 100%': { transform: 'scaleY(1.0)' },
+          '50%': { transform: 'scaleY(0.5)' },
+        }
+      },
+      animation: {
+        pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'spin-slow': 'spin 3s linear infinite',
+        'spin-fast': 'spin 1.5s linear infinite',
+        wave: 'wave 1.5s ease-in-out infinite',
+      }
     },
   },
   plugins: [],
