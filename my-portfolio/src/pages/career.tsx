@@ -16,7 +16,7 @@ export default function Work() {
                 <div className="rian" style={{}}>
                     <WorkItem 
                         company="McMaster University"
-                        position="Bachelor of Arts in Computer Science and Economics"
+                        position="Honours BA in Computer Science and Economics" 
                         duration="Expected Graduation: May 2026"
                         description= 
                         {
@@ -37,10 +37,10 @@ export default function Work() {
                         description= 
                         {
                             <p>
-                                At Dayforce, I am working on the Tax and Payments team, helping to process billions of dollars in transactions for clients across North America.
+                                At Dayforce, I worked on the Tax and Payments team, on the International Money Movement platform, helping to process billions of dollars in transactions for clients across North America daily.
                             </p>
                         }
-                        isCurrent={true}
+                        // isCurrent={true}
                     />
                     <WorkItem 
                         company="Mely.ai"

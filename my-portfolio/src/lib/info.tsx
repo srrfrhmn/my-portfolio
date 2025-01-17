@@ -1,6 +1,7 @@
 import ExpandableBar from '@/components/ExpandableBar'
 import { FaGithub, FaExternalLinkAlt, } from 'react-icons/fa';
 import { AiFillLinkedin, AiOutlineGithub, AiOutlineMail } from 'react-icons/ai';
+import { FiArrowUpRight } from 'react-icons/fi';
 
 interface TermProp { 
     cd?: string;
@@ -202,14 +203,14 @@ export const Projects = () => {
 
 export const Contact = () => {
     const contactLinks = [
-        { href: "https://www.linkedin.com/in/srrfrhmn/", Icon: AiFillLinkedin },
-        { href: "https://github.com/srrfrhmn", Icon: AiOutlineGithub },
-        { href: "mailto:srrfrhmn@gmail.com", Icon: AiOutlineMail },
+        { href: "https://www.linkedin.com/in/srrfrhmn/", Icon: FiArrowUpRight, text: "linkedin" },
+        { href: "https://github.com/srrfrhmn", Icon: FiArrowUpRight, text: "github" },
+        { href: "mailto:srrfrhmn@gmail.com", Icon: FiArrowUpRight, text: "mail" },
     ];
 
     return (
         <div className="flex">
-            {contactLinks.map(({ href, Icon }, index) => (
+            {contactLinks.map(({ href, Icon, text }, index) => (
                 <a
                     key={index}
                     className="ml-1"
@@ -217,7 +218,7 @@ export const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <Icon size={20} />
+                    <div className='flex'><p>{text}</p><Icon size={20} /></div>
                 </a>
             ))}
         </div>

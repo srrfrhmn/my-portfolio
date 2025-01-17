@@ -38,8 +38,8 @@ export default function Home() {
               <Bio 
                 university="McMaster University"
                 degree="Honours Bachelor of Arts in Computer Science and Economics"
-                workPlace="Dayforce"
-                workPosition="Software Engineer Intern"
+                // workPlace="Dayforce"
+                // workPosition="Software Engineer Intern"
               />
           </div>
       </main>
