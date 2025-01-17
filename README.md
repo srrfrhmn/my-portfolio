@@ -1,21 +1,49 @@
-# My Personal Portfolio
+# portfolio
 
-Welcome to my personal portfolio website, developed with Next.js!
+This is my personal portfolio website, built using Next.js. It serves as a space to provide an overview of who I am and some things I have done.
 
-## 🛠️ Technologies Used
+---
+## Overview
 
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
+- **Tech Stack**  
+  - Next.js
+  - React
+  - TypeScript
+  - TailwindCSS
 
-## 🏗️ Setup and Installation
+---
+## How to Use
 
-1. Clone the repository
-2. Install dependencies: `npm install` (I use pnpm, so `pnpm install`)
-3. Run the development server: `npm run dev` (I use pnpm, so `pnpm dev`)
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+1. **Clone or Download**  
+   Clone the repository to your local machine:
+   ```sh
+   git clone https://github.com/srrfrhmn/my-portfolio.git
+   ```
 
-## 📜 License
+2. **Install Dependencies**  
+   I use `pnpm`, but you can also use `npm`:
+   ```sh
+   pnpm install
+   ```
 
-This project is open source and available under the [MIT License](LICENSE).
+3. **Run the Development Server**  
+   Start the server locally:
+   ```sh
+   pnpm dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser to view the site.
+
+4. **Customize and Deploy**  
+   Modify the content and styling as needed. The site is optimized for deployment on platforms like Vercel.
+
+---
+## Notes
+
+I prefer keeping my portfolio visually lightweight and maintainable.
+
+---
+## Contributing
+
+If you have suggestions for improvements, feel free to open a PR. I’m always open to feedback and ways to enhance the project.
+
+---Welcome to Online Text Editor (formerly EditPad.org) - your online plain text editor. Enter or paste your text here. To download and save it, click on the button below.

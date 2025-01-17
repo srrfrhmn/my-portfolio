@@ -1,6 +1,0 @@
-{
-    "framework": "nextjs",
-    "buildCommand": "cd my-portfolio && pnpm build",
-    "installCommand": "cd my-portfolio && pnpm install",
-    "rootDirectory": "my-portfolio"
-  }
