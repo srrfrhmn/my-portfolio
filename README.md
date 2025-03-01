@@ -1,6 +1,6 @@
 # portfolio
 
-This is my personal portfolio website, built using Next.js. It serves as a space to provide an overview of who I am and some things I have done.
+This is my personal portfolio website, built using Next.js.
 
 ---
 ## Overview
