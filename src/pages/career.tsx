@@ -40,7 +40,7 @@ export default function Work() {
                                 At RBC, I worked on the Digital Shared Services team in Payments, where I helped develop and maintain the core banking infrastructure.
                             </p>
                         }
-                        // isCurrent={true}
+                        isCurrent={true}
                     />
                     <WorkItem 
                         company="Dayforce"
