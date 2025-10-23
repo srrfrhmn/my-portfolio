@@ -17,7 +17,7 @@ export default function Work() {
                     <WorkItem 
                         company="McMaster University"
                         position="Honours BA in Computer Science and Economics" 
-                        duration="Expected Graduation: May 2026"
+                        duration="Expected Graduation: December 2026"
                         description= 
                         {
                             <p>
@@ -30,6 +30,18 @@ export default function Work() {
                 </div>
 
                 <div className="rian" style={{}}>
+                    <WorkItem 
+                        company="Royal Bank of Canada"
+                        position="Software Engineer Intern"
+                        duration="September 2025 - December 2025"
+                        description= 
+                        {
+                            <p>
+                                At RBC, I worked on the Digital Shared Services team in Payments, where I helped develop and maintain the core banking infrastructure.
+                            </p>
+                        }
+                        // isCurrent={true}
+                    />
                     <WorkItem 
                         company="Dayforce"
                         position="Software Engineer Intern"
