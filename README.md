@@ -1,49 +1,45 @@
-# portfolio
+# Sarraf Rahman's portfolio
 
-This is my personal portfolio website, built using Next.js.
+A minimal portfolio built with Next.js, React, TypeScript, and Tailwind CSS.
 
+## Local development
+
+Use Node.js 20.9 or later and pnpm.
+
+```sh
+pnpm install
+pnpm dev
+```
+
+Open http://localhost:3000. The site includes an introduction, career history, and photography gallery.
+
+## Checks and production build
+
+```sh
+pnpm lint
+pnpm typecheck
+pnpm build
+pnpm start
+```
+
+Content lives in `src/pages` and `src/lib/info.tsx`; photographs live in `public/gallery`. Shared layout styles live in `src/styles/globals.css`.
+
+## Writing blog posts
+
+Add a Markdown file to `content/posts`, using a lowercase, hyphenated filename such as `hello-world.md`. Its filename becomes the URL: `/blog/hello-world`.
+
+Start each post with metadata:
+
+```markdown
 ---
-## Overview
-
-- **Tech Stack**  
-  - Next.js
-  - React
-  - TypeScript
-  - TailwindCSS
-
+title: Hello World
+date: '2026-10-07'
+description: A small beginning for this blog.
 ---
-## How to Use
 
-1. **Clone or Download**  
-   Clone the repository to your local machine:
-   ```sh
-   git clone https://github.com/srrfrhmn/my-portfolio.git
-   ```
+Write your post here using Markdown.
+```
 
-2. **Install Dependencies**  
-   I use `pnpm`, but you can also use `npm`:
-   ```sh
-   pnpm install
-   ```
+Keep the date quoted. Posts appear newest first. Markdown supports headings, links, images, lists, blockquotes, and code blocks; embedded HTML is not rendered. Store post images in `public/blog` and reference them with `/blog/your-image.jpg`.
 
-3. **Run the Development Server**  
-   Start the server locally:
-   ```sh
-   pnpm dev
-   ```
-   Open [http://localhost:3000](http://localhost:3000) in your browser to view the site.
-
-4. **Customize and Deploy**  
-   Modify the content and styling as needed. The site is optimized for deployment on platforms like Vercel.
-
----
-## Notes
-
-I prefer keeping my portfolio visually lightweight and maintainable.
-
----
-## Contributing
-
-If you have suggestions for improvements, feel free to open a PR. I’m always open to feedback and ways to enhance the project.
-
----Welcome to Online Text Editor (formerly EditPad.org) - your online plain text editor. Enter or paste your text here. To download and save it, click on the button below.
+Preview with `pnpm dev`. Posts are generated at build time, so publishing a new post requires rebuilding and deploying the site. A Git-connected host can do this automatically on push; no deployment automation is configured by this blog feature.

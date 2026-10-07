@@ -3,7 +3,7 @@ import { FaGithub, FaExternalLinkAlt, } from 'react-icons/fa';
 import { AiFillLinkedin, AiOutlineGithub, AiOutlineMail } from 'react-icons/ai';
 import { FiArrowUpRight } from 'react-icons/fi';
 
-interface TermProp { 
+interface TermProp {
     cd?: string;
 }
 
@@ -18,7 +18,7 @@ export const FullName = () => {
 export const ShortIntro = () => {
     return (
         <>
-        building square wheels to understand why they& circles.
+        building square wheels to understand why they&apos;re circles.
         </>
     )
 }
@@ -43,10 +43,11 @@ interface BioProps {
   workPlace?: string;
   workPosition?: string;
   university?: string;
+  universityUrl?: string;
   degree?: string;
 }
 
-export const Bio: React.FC<BioProps> = ({ workPlace, workPosition, university, degree }) => {
+export const Bio: React.FC<BioProps> = ({ workPlace, workPosition, university, universityUrl, degree }) => {
   return (
     <div className='default-font responsive-desc'>
       {workPlace && workPosition && (
@@ -66,7 +67,7 @@ export const Bio: React.FC<BioProps> = ({ workPlace, workPosition, university, d
           pursuing a{' '}
           <span className="text-neutral-400">{degree}</span>{' '}
           at{' '}
-          <a href={`https://www.${university.toLowerCase().replace(/\s+/g, '')}.edu`} className='text-neutral-400 hover:underline' target="_blank" rel="noopener noreferrer">
+          <a href={universityUrl} className='text-neutral-400 hover:underline' target="_blank" rel="noopener noreferrer">
             {university}
           </a>
           .
@@ -83,7 +84,7 @@ export const Bio: React.FC<BioProps> = ({ workPlace, workPosition, university, d
 interface ListProps {
     items: string[];
   }
-  
+
 const StringList: React.FC<ListProps> = ({ items }) => {
     return (
         <ul className="skills-list custom-arrow-list text-black black string-list">
@@ -104,7 +105,7 @@ const skills = [
     "Spring",
     "Python",
   ];
-  
+
 export const Technologies = () => {
     return (
         <ul className="skills-list custom-arrow-list">
@@ -209,7 +210,7 @@ export const Contact = () => {
     ];
 
     return (
-        <div className="flex">
+        <div className="contact-links">
             {contactLinks.map(({ href, Icon, text }, index) => (
                 <a
                     key={index}
@@ -231,7 +232,7 @@ export const HL = () => {
 
 export const AnimatedWave = () => {
   return (
-    <span className="ml-3 inline-flex space-x-1">
+    <span aria-hidden="true" className="ml-3 inline-flex space-x-1">
       <span className="w-0.5 h-4 bg-gray-600 rounded-full animate-wave"></span>
       <span className="w-0.5 h-4 bg-gray-600 rounded-full animate-wave" style={{animationDelay: '0.2s'}}></span>
     </span>

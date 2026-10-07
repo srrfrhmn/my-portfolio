@@ -1,6 +1,6 @@
 import Image from "next/image"
+import { FiArrowUpRight } from 'react-icons/fi'
 
-import {HL} from "@/lib/info"
 
 export default function Gallery() {
 
@@ -22,33 +22,35 @@ export default function Gallery() {
       ];
 
       const columns = Array.from({ length: 4 }, () => [] as string[]);
-      
+
       imagePaths.forEach((src, index) => {
         const columnIndex = index % 4;
         columns[columnIndex].push(src);
-      });      
+      });
 
     return (
       <>
-        <main className={`main-cont p-4 md:p-10 lg:p-20`} style={{height: '100vh', overflowY: 'auto'}}>
+        <main id="main-content" className="main-cont">
             <div className='text-left'>
-                <h1 className='default-font mb-6 text-4xl tracking-tighter'> my gallery </h1>
+                <h1 className='default-font mb-2 text-4xl tracking-tighter'> my gallery </h1>
             </div>
-            <p className="default-font text-neutral-300 mb-3 text-sm"><span className="text-neutral-500">
-              i like to take photos and post them on </span> <a href="https://vsco.co/srrfrhmn/gallery" target="_blank" rel="noopener noreferrer">vsco</a><span className="text-neutral-500">.</span>
+            <p className="default-font text-neutral-300 text-sm"><span className="text-neutral-500">
+              i like to take photos and post them on </span> <a className="inline-flex items-center underline underline-offset-4 hover:text-white" href="https://vsco.co/srrfrhmn/gallery" target="_blank" rel="noopener noreferrer">vsco<FiArrowUpRight size={20} aria-hidden="true" /></a><span className="text-neutral-500">.</span>
             </p>
-            <HL />
+            <hr className="page-divider" />
 
-            <div className="column-container" style={{maxHeight: '60vh'}}>
+            <div className="column-container">
                 {columns.map((columnImages, columnIndex) => (
                 <div key={columnIndex} className="column-item">
-                    {columnImages.map((src, index) => (
-                    <Image key={index} className="p-1" src={src} alt="" width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}}/>
+                    {columnImages.map((src) => (
+                    <a key={src} href="https://vsco.co/srrfrhmn/gallery" target="_blank" rel="noopener noreferrer" aria-label="View my photos on VSCO (opens in a new tab)" className="block transition-opacity hover:opacity-80">
+                        <Image src={src} alt="" width={800} height={1000} sizes="(max-width: 640px) calc((100vw - 48px) / 2), (min-width: 1920px) 210px, 140px" style={{width: '100%', height: 'auto'}}/>
+                    </a>
                     ))}
                 </div>
                 ))}
             </div>
-            
+
         </main>
       </>
     )

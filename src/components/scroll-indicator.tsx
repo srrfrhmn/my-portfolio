@@ -1,40 +1,30 @@
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-import { ScrollDown } from '@/lib/info';
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
+import { ScrollDown } from '@/lib/info'
 
-const ScrollIndicator = () => {
-  const [isAtBottom, setIsAtBottom] = useState(false);
-  const router = useRouter();
-
-  const checkScrollPosition = () => {
-    const scrollTop = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const docHeight = document.documentElement.offsetHeight;
-
-    setIsAtBottom(scrollTop + windowHeight >= docHeight);
-  };
+export default function ScrollIndicator() {
+  const [isAtBottom, setIsAtBottom] = useState(true)
+  const router = useRouter()
 
   useEffect(() => {
-    const handleRouteChange = () => {
-      checkScrollPosition();
-    };
-
-    window.addEventListener('scroll', checkScrollPosition);
-    router.events.on('routeChangeComplete', handleRouteChange); // Listen for route changes
-
-    checkScrollPosition(); // Initial check
-
+    let frame = 0
+    const checkPosition = () => {
+      cancelAnimationFrame(frame)
+      frame = requestAnimationFrame(() => {
+        setIsAtBottom(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 1)
+      })
+    }
+    window.addEventListener('scroll', checkPosition, { passive: true })
+    window.addEventListener('resize', checkPosition)
+    router.events.on('routeChangeComplete', checkPosition)
+    checkPosition()
     return () => {
-      window.removeEventListener('scroll', checkScrollPosition);
-      router.events.off('routeChangeComplete', handleRouteChange); // Stop listening when component unmounts
-    };
-  });
+      cancelAnimationFrame(frame)
+      window.removeEventListener('scroll', checkPosition)
+      window.removeEventListener('resize', checkPosition)
+      router.events.off('routeChangeComplete', checkPosition)
+    }
+  }, [router.events])
 
-  return (
-    <div className={`indicator ${isAtBottom ? 'hidden' : ''}`}>
-      <ScrollDown />
-    </div>
-  );
-};
-
-export default ScrollIndicator;
+  return isAtBottom ? null : <div className="indicator" aria-hidden="true"><ScrollDown /></div>
+}

@@ -1,105 +1,72 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import WorkItem from "@/components/WorkItem"
-import {HL} from "@/lib/info"
+import WorkItem from '@/components/WorkItem'
 
-export default function Work() {
-    const router = useRouter();
+const positions = [
+  {
+    company: 'Robinhood',
+    position: 'Software Engineer Intern',
+    duration: 'May 2026 – August 2026',
+    team: 'Brokerage · Trading Products · Options',
+  },
+  {
+    company: 'Royal Bank of Canada',
+    position: 'Software Engineer Intern',
+    duration: 'September 2025 – December 2025',
+    team: 'Payments · Digital Shared Services',
+  },
+  {
+    company: 'Dayforce',
+    position: 'Software Engineer Intern',
+    duration: 'May 2024 – December 2024',
+    team: 'Tax and Payments · International Money Movement',
+  },
+  {
+    company: 'Mely.ai',
+    position: 'Software Engineer Intern',
+    duration: 'September 2023 – December 2023',
+    team: 'Intelligent Document Processing',
+  },
+  {
+    company: 'Doorbie',
+    position: 'Software Engineer Intern',
+    duration: 'January 2023 – August 2023',
+    team: 'Property Management & Marketplace Platform',
+  },
+  {
+    company: 'Prograsp',
+    position: 'Programming Instructor',
+    duration: 'August 2021 – February 2022',
+  },
+  {
+    company: 'Junior Achievement',
+    position: 'Project Manager',
+    duration: 'September 2018 – March 2020',
+  },
+]
 
-    return (
-      <>
-        <main className={`main-cont p-4 md:p-10 lg:p-20`} style={{}}>
-            <div className='text-left'>
-                <h1 className='default-font mb-6 text-4xl tracking-tighter'> my career </h1>
-                <p className="default-font text-neutral-500 mb-3 text-sm">feel free to contact me about my <span className="text-white">resume </span> for more details. </p>
-                <HL />
-                <div className="rian" style={{}}>
-                    <WorkItem 
-                        company="McMaster University"
-                        position="Honours BA in Computer Science and Economics" 
-                        duration="Expected Graduation: December 2026"
-                        description= 
-                        {
-                            <p>
-                                
-                            </p>
-                        }
-                        isEducation={true}
-                    />
-                    {/* Add more education items if needed */}
-                </div>
+export default function Career() {
+  return (
+    <main id="main-content" className="main-cont">
+      <h1 className="default-font mb-2 text-4xl tracking-tighter">my career</h1>
+      <p className="text-neutral-400 text-sm">
+        feel free to contact me about my{' '}
+        <a className="text-white underline underline-offset-4" href="mailto:srrfrhmn@gmail.com">resume</a>{' '}
+        for more details.
+      </p>
+      <hr className="page-divider" />
 
-                <div className="rian" style={{}}>
-                    <WorkItem 
-                        company="Royal Bank of Canada"
-                        position="Software Engineer Intern"
-                        duration="September 2025 - December 2025"
-                        description= 
-                        {
-                            <p>
-                                At RBC, I worked on the Digital Shared Services team in Payments, where I helped develop and maintain the core banking infrastructure.
-                            </p>
-                        }
-                    />
-                    <WorkItem 
-                        company="Dayforce"
-                        position="Software Engineer Intern"
-                        duration="May 2024 - December 2024"
-                        description= 
-                        {
-                            <p>
-                                At Dayforce, I worked on the Tax and Payments team, on the International Money Movement platform, helping to process billions of dollars in transactions for clients across North America daily.
-                            </p>
-                        }
-                        // isCurrent={true}
-                    />
-                    <WorkItem 
-                        company="Mely.ai"
-                        position="Software Engineer Intern"
-                        duration="September 2023 - December 2023"
-                        description= 
-                        {
-                            <p>
-                                At Mely.ai, I worked on a platform that performed Intelligent Document Processing for the transportation and logistics industry.
-                            </p>
-                        }
-                    />
-                    <WorkItem 
-                        company="Doorbie"
-                        position="Software Engineer Intern"
-                        duration="January 2023 - August 2023"
-                        description= 
-                        {
-                            <p>
-                                At Doorbie, I worked on a Property Management & Marketplace Platform, to simplify the rental process from start to finish for both tenants and landlords.
-                            </p>
-                        }
-                    />
-                    <WorkItem 
-                        company="Prograsp"
-                        position="Programming Instructor"
-                        duration="August 2021 - February 2022"
-                        description= 
-                        {
-                            <p>
-                                At Prograsp, I worked to streamline the grading workflow for programming assignments, and worked with students to help them write better code. 
-                            </p>
-                        }
-                    />
-                    <WorkItem 
-                        company="Junior Achievement"
-                        position="Project Manager"
-                        duration="September 2018 - March 2020"
-                        description= 
-                        {
-                            <p>
-                                At Junior Achievement, I managed team of students and worked with experienced mentors to create a student driven business and achieve sales targets month-to-month.  
-                            </p>
-                        }
-                    />
-                </div>
-            </div>
-        </main>
-      </>
-    )
+      <section className="career-education" aria-labelledby="education-heading">
+        <h2 id="education-heading" className="career-section-label">Education</h2>
+        <h3 className="text-lg font-semibold tracking-tight">McMaster University</h3>
+        <p className="text-sm text-neutral-300">Honours BA in Computer Science and Economics</p>
+        <p className="text-sm text-neutral-400 mt-1">Expected Graduation: December 2026</p>
+      </section>
+
+      <section aria-labelledby="experience-heading">
+        <h2 id="experience-heading" className="career-section-label">Experience</h2>
+        <ol className="career-timeline">
+          {positions.map((position) => <WorkItem key={position.company} {...position} />)}
+        </ol>
+      </section>
+    </main>
+  )
 }
