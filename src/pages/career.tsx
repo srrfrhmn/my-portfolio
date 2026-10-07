@@ -58,7 +58,7 @@ export default function Career() {
         <h2 id="education-heading" className="career-section-label">Education</h2>
         <h3 className="text-lg font-semibold tracking-tight">McMaster University</h3>
         <p className="text-sm text-neutral-300">Honours BA in Computer Science and Economics</p>
-        <p className="text-sm text-neutral-400 mt-1">Expected Graduation: December 2026</p>
+        <p className="text-sm text-neutral-400 mt-1">Expected Graduation: December 2027</p>
       </section>
 
       <section aria-labelledby="experience-heading">
