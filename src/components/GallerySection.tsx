@@ -30,9 +30,9 @@ export default function Gallery() {
 
     return (
       <>
-        <main id="main-content" className="main-cont">
+        <section id="gallery" className="portfolio-section" aria-labelledby="gallery-title">
             <div className='text-left'>
-                <h1 className='default-font mb-2 text-4xl tracking-tighter'> my gallery </h1>
+                <h2 id="gallery-title" className='default-font mb-2 text-4xl tracking-tighter'> my gallery </h2>
             </div>
             <p className="default-font text-neutral-300 text-sm"><span className="text-neutral-500">
               i like to take photos and post them on </span> <a className="inline-flex items-center underline underline-offset-4 hover:text-white" href="https://vsco.co/srrfrhmn/gallery" target="_blank" rel="noopener noreferrer">vsco<FiArrowUpRight size={20} aria-hidden="true" /></a><span className="text-neutral-500">.</span>
@@ -51,7 +51,7 @@ export default function Gallery() {
                 ))}
             </div>
 
-        </main>
+        </section>
       </>
     )
 }

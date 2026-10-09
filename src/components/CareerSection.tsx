@@ -45,8 +45,8 @@ const positions = [
 
 export default function Career() {
   return (
-    <main id="main-content" className="main-cont">
-      <h1 className="default-font mb-2 text-4xl tracking-tighter">my career</h1>
+    <section id="career" className="portfolio-section" aria-labelledby="career-title">
+      <h2 id="career-title" className="default-font mb-2 text-4xl tracking-tighter">my career</h2>
       <p className="text-neutral-400 text-sm">
         feel free to contact me about my{' '}
         <a className="text-white underline underline-offset-4" href="mailto:srrfrhmn@gmail.com">resume</a>{' '}
@@ -67,6 +67,6 @@ export default function Career() {
           {positions.map((position) => <WorkItem key={position.company} {...position} />)}
         </ol>
       </section>
-    </main>
+    </section>
   )
 }

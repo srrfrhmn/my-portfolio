@@ -34,7 +34,7 @@ export default function BlogPost({ post }: InferGetStaticPropsType<typeof getSta
         <hr className="page-divider" />
         <div className="blog-prose"><ReactMarkdown>{post.content}</ReactMarkdown></div>
       </article>
-      <Link className="blog-back" href="/blog">← all posts</Link>
+      <Link className="blog-back" href="/#blog">← all posts</Link>
     </main>
   )
 }
